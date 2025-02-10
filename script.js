@@ -404,8 +404,12 @@ function mousePosition(event) {
 //Preload all images for faster loadtimes 25-02-10
 window.onload = function() {
     var imagePaths = [
-        "media/images/killers/avatar/*",
-        "media/images/survivors/avatar/david_large.webp"
+        "media/images/survivors/avatar/claudette_large.webp",
+        "media/images/survivors/avatar/david_large.webp",
+        "media/images/survivors/avatar/dwight_large.webp",
+        "media/images/survivors/avatar/jake_large.webp",
+        "media/images/survivors/avatar/meg_large.webp",
+        "media/images/survivors/avatar/nea_large.webp",
     ];
     imagePaths.forEach(function(src) {
         var img = new Image();
