@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dead by Daylight Wiki</title>
+    <!--Import CSS stylesheet 23-12-13-->
+    <link rel="stylesheet" href="./style.css" />
+    <!--Disable favicon error 23-12-14-->
+    <link rel="icon" href="data:;base64,iVBORwOKGO=" />
+  </head>
+  <body>
+
+    <!--Dialog box/modal when opening the site 23-12-19-->
+
+    <dialog id="openingbox" open>
+        <p id="openingboxtext">Welcome to the Dead by Daylight Wiki <br><br><br>Do you wish to enter?</p>
+      <button id ="openingbutton">
+        <p>Accept</p>
+      </button>
+    </dialog>
+
+    <!--Logo 23-12-12-->
+    
+    <header id="headerbox">
+      <img
+        class="dbdlogo"
+        src="./media/images/logo/dbdlogo.png"
+        alt="An image of the Dead by Daylight Logo"
+      />
+    </header>
+
+    <!--Dialog box with character info 23-12-15-->
+      <dialog id="modal" id="characterwiki" onclick="mousePosition(event)">
+        <p id="wikiname">Name of the character</p>
+        <!--Added a div containing the avatar of the character 23-12-18-->
+        <div id="avatarstyle">
+           <img id="wikiavatar" src="" />
+        </div>
+        <p id="wikialias">Alias of the character</p>
+        <p id="wikigender">Gender of the character</p>
+        <p id="wikiorigin">Nationality of the character</p>
+        <hr id="wikilinetop">
+        <img id =wikiquoteleft src="./media/images/other/Quotes_left.webp">
+        <p id="wikidescription">Description of the character</p>
+        <img id =wikiquoteright src="./media/images/other/Quotes_right.webp">
+        <!--Perks for each character 23-12-18-->
+        <div id="wikiperks">
+          <!--Wiki line added 23-12-19-->
+          <hr id="wikilinebottom">
+          <p id="wikiperktext">Perks</p>
+          <div id="perkslots">
+            <!--Divs added for tooltips 23-12-23-->
+            <div>
+              <span id="wikinameperk1">Perk 1</span>
+              <img id="wikiperk1" src="" />
+              <div id="tooltipbox1">
+                <span id="tooltiptext1"></span>
+              </div>
+            </div>
+            <div>
+              <span id="wikinameperk2">Perk 2</span>
+              <img id="wikiperk2" src="" />
+              <div id="tooltipbox2">
+                <span id="tooltiptext2"></span>
+              </div>
+            </div>
+            <div>
+              <span id="wikinameperk3">Perk 3</span>
+              <img id="wikiperk3" src="" />
+              <div id="tooltipbox3">
+                <span id="tooltiptext3"></span>
+              </div>
+            </div>
+          </div>
+
+          </div>
+      <!--Button on top right corner of dialog/wiki box to close 23-12-17-->
+      <button id="closewiki">&#x2715</button>
+    </dialog>
+
+    <main id="mainbox">
+      <!--Survivor List 23-12-13-->
+      <div id="survivorbox" class="text">
+        <ul class="listtext">
+          <p id="survivortitle" class="bigfont">Survivors</p>
+            <!--Dwight-->
+          <li>
+            <img
+              id="openwikidwight"
+              class="charportrait"
+              src="./media/images/survivors/dwight.webp"
+              alt="An image of Dwight Fairfield"
+              onclick="selectedPortrait(dwightInfo)"
+            />
+            <span>Dwight Fairfield</span>
+          </li>
+          <!--Meg-->
+          <li>
+            <img
+              id="openwikimeg"
+              class="charportrait"
+              src="./media/images/survivors/meg.webp"
+              alt="An image of Meg Thomas"
+              onclick="selectedPortrait(megInfo)"
+            />
+            <span>Meg Thomas</span>
+          </li>
+          <!--Jake-->
+          <li>
+            <img
+              id="openwikijake"
+              class="charportrait"
+              src="./media/images/survivors/jake.webp"
+              alt="An image of Jake Park"
+              onclick="selectedPortrait(jakeInfo)"
+            />
+            <span>Jake Park</span>
+          </li>
+          <!--Claudette-->
+          <li>
+            <img
+              id="openwikiclaudette"
+              class="charportrait"
+              src="./media/images/survivors/claudette.webp"
+              alt="An image of Claudette Morel"
+              onclick="selectedPortrait(claudetteInfo)"
+            />
+            <span>Claudette Morel</span>
+          </li>
+          <!--David-->
+          <li>
+            <img
+              id="openwikidavid"
+              class="charportrait"
+              src="./media/images/survivors/david.webp"
+              alt="An image of David King"
+              onclick="selectedPortrait(davidInfo)"
+            />
+            <span>David King</span>
+          </li>
+          <!--Nea-->
+          <li>
+            <img
+              id="openwikinea"
+              class="charportrait"
+              src="./media/images/survivors/nea.webp"
+              alt="An image of Linnea Karlsson"
+              onclick="selectedPortrait(neaInfo)"
+            />
+            <span>Nea Karlsson</span>
+          </li>
+        </ul>
+      </div>
+      <div id="mainboxseparator"></div>
+      <!--Killer List-->
+      <div id="killerbox" class="text" class="list">
+        <ul class="listtext">
+          <p id="killertitle" class="bigfont">Killers</p>
+          <li>
+            <!--Trapper-->
+            <img
+              id="openwikitrapper"
+              class="charportrait"
+              src="./media/images/killers/trapper.webp"
+              alt="An image of the trapper"
+              onclick="selectedPortrait(trapperInfo)"
+            />
+            <span>The Trapper</span>
+          </li>
+          <!--Wraith-->
+          <li>
+            <img
+              id="openwikiwraith"
+              class="charportrait"
+              src="./media/images/killers/wraith.webp"
+              alt="An image of the wraith"
+              onclick="selectedPortrait(wraithInfo)"
+            />
+            <span>The Wraith</span>
+          </li>
+          <!--Hillbilly-->
+          <li>
+            <img
+              id="openwikihillbilly"
+              class="charportrait"
+              src="./media/images/killers/hillbilly.webp"
+              alt="An image of the hillbilly"
+              onclick="selectedPortrait(hillbillyInfo)"
+            />
+            <span>The Hillbilly</span>
+          </li>
+          <!--Nurse-->
+          <li>
+            <img
+              id="openwikinurse"
+              class="charportrait"
+              src="./media/images/killers/nurse.webp"
+              alt="An image of the nurse"
+              onclick="selectedPortrait(nurseInfo)"
+            />
+            <span>The Nurse</span>
+          </li>
+          <!--Huntress-->
+          <li>
+            <img
+              id="openwikihuntress"
+              class="charportrait"
+              src="./media/images/killers/huntress.webp"
+              alt="An image of the huntress"
+              onclick="selectedPortrait(huntressInfo)"
+            />
+            <span>The Huntress</span>
+          </li>
+          <!--Hag-->
+          <li>
+            <img
+              id="openwikihag"
+              class="charportrait"
+              src="./media/images/killers/hag.webp"
+              alt="An image of the hag"
+              onclick="selectedPortrait(hagInfo)"
+            />
+            <span>The Hag</span>
+          </li>
+        </ul>
+      </div>
+      <!--Background Video 23-12-14-->
+      <div>
+        <video
+          id="backgroundvideo"
+          width="100%"
+          height="100%"
+          autoplay
+          loop
+          muted
+        >
+          <source src="./media/videos/campfire.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    </main>
+
+    <!--Background Campfire sound 23-12-14-->
+
+    <audio id="campfire" loop muted>
+      <source src="./media/sound/campfire.mp3" type="audio/mp3" />
+    </audio>
+
+    <!--Menu theme 23-12-19-->
+
+    <audio id="menutheme" loop muted >
+      <source src="./media/sound/archives.ogg" type="audio/ogg" />
+    </audio>
+    
+    <!--Opening button sound effect-->
+    <audio id="openingbuttonsfx">
+      <source src="./media/sound/dbdexposed.ogg" type="audio/ogg" />
+    </audio>
+    
+    <!--When you select something sound effect-->
+    <audio id="selectbuttonsfx">
+      <source src="./media/sound/select.ogg" type="audio/ogg" />
+    </audio>
+    
+    
+    <!--Survivor and Killer Themes 23-12-14-->
+    <!--COMMENTED OUT THEMES - RE-ENABLE THEM FOR MP3-->
+    <!--<audio id="surv" loop muted>
+      <source src="media/sound/survtheme.mp3" type="audio/mp3" />-->
+    </audio>
+
+    <audio id="kill" loop muted>
+      <!--<source src="media/sound/killtheme.mp3" type="audio/mp3" />-->
+    </audio>
+  </body>
+
+
+  <!--Import Javascript 23-12-14-->
+  <script src="./script.js" text="text/javascript"></script>
+</html>

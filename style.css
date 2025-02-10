@@ -1,0 +1,729 @@
+/*Fonts (Roboto) 23-12-18*/
+
+@font-face {
+  font-family: "roboto";
+  src: url(./media/fonts/Roboto-Light.ttf) format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "roboto";
+  src: url(./media/fonts/Roboto-Bold.ttf) format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: "roboto";
+  src: url(./media/fonts/Roboto-Italic.ttf) format("truetype");
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "roboto";
+  src: url(./media/fonts/Roboto-BoldItalic.ttf) format("truetype");
+  font-weight: bold;
+  font-style: italic;
+}
+
+/*Hide scroll from main page 23-12-20*/
+
+body::-webkit-scrollbar {
+  display: none; /*Chrome and other modern browsers*/
+}
+body {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+/*Dialog opening box 23-12-19*/
+
+#openingbox {
+  position: fixed;
+  background-color: rgba(20, 20, 20, 0.9);
+  border: none;
+  min-width: 100%;
+  min-height: 100%;
+  padding: 0;
+}
+
+#openingbox #openingboxtext {
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  color: white;
+  margin-top: 400px;
+  margin-bottom: 60px;
+  user-select: none;
+}
+
+#openingbox #openingbutton {
+  font-size: 26px;
+  background-color: rgba(50, 50, 50, 0.3);
+  color: rgba(200, 200, 200, 1);
+  margin: auto;
+  display: flex;
+  width: 200px;
+  height: 100px;
+  user-select: none;
+}
+
+#openingbox #openingbutton p {
+  margin: auto;
+  display: flex;
+}
+
+#openingbox #openingbutton:hover {
+  color: rgba(225, 225, 225, 1);
+  background-color: rgba(75, 75, 75, 0.3);
+}
+
+/*Background and settings 23-12-12*/
+
+body {
+  background-color: rgb(30, 30, 30);
+  font-family: "roboto";
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  min-height: 100%;
+}
+
+/*Main 23-12-12*/
+
+main {
+  display: flex;
+}
+
+
+#mainbox {
+  padding-bottom: 150px;
+  width: 100%;
+  min-width: 600px;
+}
+
+/*Fullscreen Background Video 23-12-14*/
+
+#backgroundvideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  object-fit:cover;
+  z-index: -1;
+}
+
+/*Header 23-12-12*/
+
+#headerbox {
+  padding: 50px 0 50px 0;
+  width: 100%;
+  min-width: 600px;
+  text-align: center;
+}
+/*Logo 23-12-12*/
+
+.dbdlogo {
+  width: 500px;
+  margin: auto;
+  filter: invert();
+}
+/*Texts & Fonts 23-12-12*/
+
+.text {
+  color: white;
+  font-size: 18px;
+}
+.bold {
+  font-weight: bold;
+}
+.bigfont {
+  font-size: 28px;
+  font-weight: 300;
+  letter-spacing: 0.03cm;
+}
+/*Lists 23-12-13*/
+
+#survivortitle {
+  font-weight: bold;
+  text-align: center;
+  color: rgba(100, 100, 100, 1);
+  user-select: none;
+  width: 100%
+}
+#killertitle {
+  font-weight: bold;
+  text-align: center;
+  color: rgba(100, 30, 30, 1);
+  user-select: none;
+  width: 100%
+}
+.listcenter {
+  text-align: center;
+  display: inline-block;
+  list-style-type: none;
+}
+.listtext {
+  width: 100%;
+  list-style-type: none;
+  user-select: none;
+  margin: 0, 10, 0, 10;
+  padding: 0px;
+}
+.listtext li img {
+  margin-left: 60px;
+}
+
+/*Portraits & animations 23-12-14*/
+
+.charportrait {
+  vertical-align: -30px;
+  margin-top: 10px;
+  transition-duration: 0.3s;
+}
+
+.charportrait:hover {
+  transform: scale(1.2);
+}
+
+/*Boxes 23-12-13*/
+
+#survivorbox {
+  background-color: rgba(25, 25, 30, 0.4);
+  width: 320px;
+  border: 1px solid rgb(20, 20, 25);
+  border-radius: 50px;
+  margin: auto 0 auto auto;
+  display: flex;
+  min-width: 250px;
+}
+
+#killerbox {
+  background-color: rgba(30, 25, 25, 0.4);
+  width: 320px;
+  border: 1px solid rgb(25, 20, 20);
+  border-radius: 50px;
+  margin: auto auto auto 0;
+  display: flex;
+  min-width: 250px;
+}
+
+#mainboxseparator {
+  width: 280px;
+}
+
+/*Audio 23-12-14*/
+
+#audio {
+  display: none;
+}
+
+/*Wiki Box 23-12-18*/
+
+#modal {
+  background-image: linear-gradient(
+    to bottom right,
+    rgba(25, 25, 25, 0.9),
+    rgba(20, 20, 20, 0.9)
+  );
+  background-color: rgba(10, 10, 10, 0);
+  color: white;
+  border: none;
+  width: 600px;
+  height: 880px;
+  margin-top: 0x;
+  border-radius: 50px;
+  transition-duration: 2s;
+  user-select: none;
+}
+
+/*Hide scroll from modal/wikipage 23-12-20*/
+
+#modal::-webkit-scrollbar {
+  display: none; /*Chrome and other modern browsers*/
+}
+#modal {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+
+/*The backdrop color 23-12-18*/
+
+#modal::backdrop {
+  background: rgba(10, 10, 10, 0.9);
+}
+
+/*Button in wiki 23-12-17*/
+
+#closewiki {
+  font-size: 24px;
+  background: none;
+  border: none;
+  color: white;
+  top: 0;
+  right: 0;
+  margin-top: 20px;
+  margin-right: 20px;
+  position: absolute;
+}
+
+#closewiki:hover {
+  background: none;
+  border: none;
+  color: grey;
+  top: 0;
+  right: 0;
+  margin-top: 20px;
+  margin-right: 20px;
+  position: absolute;
+}
+
+/*Wiki avatar size*/
+
+#avatarstyle {
+  margin-top: -15px;
+}
+#avatarstyle img {
+  width: 50%;
+  height: 50%;
+  margin-left: 25%;
+}
+
+/*Wiki avatar gets a brightness effect when hovered over*/
+
+#avatarstyle img:hover {
+  filter: brightness(1.5);
+}
+
+/*Modal contents 23-12-18*/
+
+/*Wiki quote boxes*/
+
+#wikiquoteleft {
+  width: 10px;
+}
+#wikiquoteright {
+  width: 10px;
+  float: right;
+}
+
+/*Character Name*/
+
+#wikiname {
+  font-size: larger;
+  font-weight: bold;
+  color: rgba(175, 175, 175, 1);
+  text-align: center;
+}
+
+/*Character Alias/Title*/
+
+#wikialias {
+  font-weight: bold;
+  color: rgba(175, 175, 175, 1);
+  text-align: center;
+  margin-top: -5px;
+}
+
+/*Character Gender*/
+
+#wikigender {
+  font-size: small;
+  color: rgba(150, 150, 150, 1);
+  text-align: center;
+  margin-top: -10px;
+}
+
+/*Character Origin/Nationality*/
+
+#wikiorigin {
+  font-size: small;
+  color: rgba(150, 150, 150, 1);
+  text-align: center;
+  margin-top: -10px;
+}
+
+/*Character Description*/
+
+#wikidescription {
+  font-size: 13px;
+  color: rgba(200, 200, 200, 1);
+  text-align: center;
+  padding: 0, 5px, 0, 5px;
+  margin: 0;
+
+}
+#wikidescription:hover {
+  color: rgba(225, 225, 225, 1);
+  text-align: center;
+}
+
+/*Perks and slight text animations when hovered 23-12-18*/
+
+#wikiperktext {
+  font-weight: 600;
+  font-size: larger;
+  color: rgb(175, 175, 175);
+  text-align: center;
+  margin-bottom: 20px;
+  padding-top: 5px;
+}
+
+#wikiperks img {
+  width: 25%;
+  padding-top: 40px;
+  padding-left: 36px;
+}
+
+#wikilinetop {
+  margin-top: 5px;
+  height: 1px;
+  background-color: rgba(50, 50, 50, 1);
+  border: none;
+}
+#wikilinebottom {
+  margin-top: 20px;
+  height: 1px;
+  background-color: rgba(50, 50, 50, 1);
+  border: none;
+}
+
+#wikiperks span {
+  color: rgba(125, 125, 125, 1);
+  margin: auto;
+  width: auto;
+}
+
+#wikiperks #wikinameperk1 {
+  font-weight: bold;
+  text-align: center;
+  margin: auto;
+  width: 33%;
+  position: absolute;
+  margin-left: 8px;
+}
+#wikiperks #wikinameperk2 {
+  font-weight: bold;
+  text-align: center;
+  margin: auto;
+  width: 33%;
+  position: absolute;
+  margin-left: 8px;
+}
+#wikiperks #wikinameperk3 {
+  font-weight: bold;
+  text-align: center;
+  margin: auto;
+  width: 33%;
+  position: absolute;
+  margin-left: 8px;
+}
+
+#wikiperk1:hover {
+  filter: brightness(1.2);
+}
+#wikiperk2:hover {
+  filter: brightness(1.2);
+}
+#wikiperk3:hover {
+  filter: brightness(1.2);
+}
+
+/*To correct positioning when divs were added for tooltips 23-12-23*/
+#perkslots div {
+  display: inline;
+}
+
+/*Tooltip boxes 23-12-23*/
+
+#wikiperk1:hover + #tooltipbox1 {
+  visibility: visible;
+  opacity: 0.95;
+  transition: opacity 0.2s, visibility 0.2s;
+  transition-delay: 0.2s;
+}
+#wikiperk2:hover + #tooltipbox2 {
+  visibility: visible;
+  opacity: 0.95;
+  transition: opacity 0.2s, visibility 0.2s;
+  transition-delay: 0.2s;
+}
+#wikiperk3:hover + #tooltipbox3 {
+  visibility: visible;
+  opacity: 0.95;
+  transition: opacity 0.2s, visibility 0.2s;
+  transition-delay: 0.2s;
+}
+
+#tooltipbox1 {
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.2s, visibility 0.2s;
+  display: inline-block;
+  position: absolute;
+  bottom: 350px;
+  left: 10px;
+  background-color: black;
+  text-align: center;
+  width: 612px;
+  height: fit-content;
+  padding: 20px, 10px, 20px, 10px;
+  border-radius: 16px;
+  user-select: none;
+  z-index: 1;
+}
+#tooltipbox2 {
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.2s, visibility 0.2s;
+  display: inline-block;
+  position: absolute;
+  bottom: 350px;
+  left: 10px;
+  background-color: black;
+  text-align: center;
+  width: 612px;
+  height: fit-content;
+  padding: 20px, 10px, 20px, 10px;
+  border-radius: 16px;
+  user-select: none;
+  z-index: 1;
+}
+
+#tooltipbox3 {
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.2s, visibility 0.2s;
+  display: inline-block;
+  position: absolute;
+  bottom: 350px;
+  left: 10px;
+  background-color: black;
+  text-align: center;
+  width: 612px;
+  height: fit-content;
+  padding: 20px, 10px, 20px, 10px;
+  border-radius: 16px;
+  user-select: none;
+  z-index: 1;
+}
+
+/*Tooltip text colors 23-12-23*/
+
+/*Normal text*/
+
+#perkslots div div span {
+  color: rgb(253, 253, 253);
+}
+
+/*Yellow*/
+.ttye {
+  color: rgb(254, 213, 6);
+}
+
+/*Green*/
+.ttgr {
+  color: rgb(25, 155, 30);
+}
+/*Purple*/
+.ttpu {
+  color: rgb(164, 42, 251);
+}
+
+/*Red*/
+.ttre {
+  color: rgb(220, 0, 0);
+}
+
+/*Orange*/
+.ttor {
+color: rgb(246, 105, 21);
+}
+
+/*Gold*/
+.ttgo {
+  color: rgb(205, 197, 165);
+  }
+
+/*Exhausted-yellow*/
+.ttey {
+  color: rgb(235, 212, 150)
+}
+
+
+
+
+
+/**************Resize components based on screen size started 23-12-20**************/
+
+
+@media screen and (max-width: 920px) {
+
+
+  /*****Header & Logo*****/
+
+  #headerbox {
+    min-width: 700px;
+  }
+  
+  /*****Survivor & Killer Boxes*****/
+
+  #mainboxseparator {
+    width: 10px;
+  }
+
+  .charportrait {
+    width: 50%;
+    display: block;
+    padding-left: 10px;
+  }
+  .charportrait:hover {
+    transform: scale(1.1);
+  }
+
+  #mainbox {
+    min-width: 700px;
+  }
+  #survivorbox {
+    width: 40%;
+  }
+  #survivorbox p {
+    font-size: 40px;
+  }
+
+  #killerbox {
+    width: 40%;
+  }
+  #killerbox p {
+    font-size: 40px;
+  }
+  
+  .listtext span {
+    font-size: 28px;
+    display: block;
+    text-align: center;
+    margin-bottom: 40px;
+    margin-top: 10px;
+  }
+
+  /*****Wiki*****/
+
+  #modal {
+    height: 1210px;
+  }
+  #modal #wikiname{
+    font-size: 34px;
+  }
+
+  #modal #wikialias {
+    font-size: 28px;
+  }
+
+  #modal #wikidescription {
+    font-size: 24px;
+  }
+
+  #modal #wikigender {
+    font-size: 24px;
+  }
+
+  #modal #wikiorigin {
+    font-size: 24px;
+  }
+
+  #modal #wikiperktext {
+    font-size: 28px;
+    margin-bottom: 10px;
+  }
+  #modal span {
+    font-size: 24px;
+  }
+  #modal #wikiquoteleft {
+    width: 20px;
+  }
+  #wikiquoteright {
+    width: 20px;
+  }
+  #wikilinebottom {
+    margin-top: 30px;
+  }
+  #wikiperks span {
+    font-size: 20px;
+  }
+  #wikiperks img {
+    margin-top: 20px;
+  }
+
+  /*Wiki button*/
+  #closewiki {
+    font-size: 50px;
+    background: none;
+    border: none;
+    color: white;
+    top: 0;
+    right: 0;
+    margin-top: 20px;
+    margin-right: 20px;
+    position: absolute;
+  }
+
+  /*Wiki tooltips*/
+  #tooltipbox1 {
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.2s, visibility 0.2s;
+    display: inline-block;
+    position: absolute;
+    bottom: 330px;
+    left: 10px;
+    background-color: black;
+    text-align: center;
+    width: 612px;
+    height: fit-content;
+    padding: 20px, 10px, 20px, 10px;
+    border-radius: 16px;
+    user-select: none;
+    z-index: 1;
+  }
+  #tooltipbox2 {
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.2s, visibility 0.2s;
+    display: inline-block;
+    position: absolute;
+    bottom: 330px;
+    left: 10px;
+    background-color: black;
+    text-align: center;
+    width: 612px;
+    height: fit-content;
+    padding: 20px, 10px, 20px, 10px;
+    border-radius: 16px;
+    user-select: none;
+    z-index: 1;
+  }
+  
+  #tooltipbox3 {
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.2s, visibility 0.2s;
+    display: inline-block;
+    position: absolute;
+    bottom: 330px;
+    left: 10px;
+    background-color: black;
+    text-align: center;
+    width: 612px;
+    height: fit-content;
+    padding: 20px, 10px, 20px, 10px;
+    border-radius: 16px;
+    user-select: none;
+    z-index: 1;
+  }
+
+  #perkslots div div span {
+    font-size: 24px;
+  }
+}
