@@ -401,6 +401,18 @@ function mousePosition(event) {
   }
 };
 
+//Preload all images for faster loadtimes 25-02-10
+window.onload = function() {
+    var imagePaths = [
+        "media/images/killers/avatar/*",
+        "media/images/survivors/avatar/david_large.webp"
+    ];
+    imagePaths.forEach(function(src) {
+        var img = new Image();
+        img.src = src;
+    });
+};
+
 
 ////////////////////////// TOOLS /////////////////////////////
 
