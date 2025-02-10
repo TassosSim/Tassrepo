@@ -401,15 +401,60 @@ function mousePosition(event) {
   }
 };
 
-//Preload all images for faster loadtimes 25-02-10
+//Preload images for faster loadtime in modal 25-02-10
 window.onload = function() {
     var imagePaths = [
+        //Get all survivor avatars
         "media/images/survivors/avatar/claudette_large.webp",
         "media/images/survivors/avatar/david_large.webp",
         "media/images/survivors/avatar/dwight_large.webp",
         "media/images/survivors/avatar/jake_large.webp",
         "media/images/survivors/avatar/meg_large.webp",
         "media/images/survivors/avatar/nea_large.webp",
+        //Get all killer avatars
+        "media/images/killers/avatar/hag_large.webp",
+        "media/images/killers/avatar/hillbilly_large.webp",
+        "media/images/killers/avatar/huntress_large.webp",
+        "media/images/killers/avatar/nurse_large.webp",
+        "media/images/killers/avatar/trapper_large.webp",
+        "media/images/killers/avatar/wraith_large.webp",
+        //Get all perk images
+        "media/images/perks/adrenaline.webp",
+        "media/images/perks/agitation.webp",
+        "media/images/perks/aNursesCalling.webp",
+        "media/images/perks/balancedLanding.webp",
+        "media/images/perks/beastOfPrey.webp",
+        "media/images/perks/bloodhound.webp",
+        "media/images/perks/bond.webp",
+        "media/images/perks/botanyKnowledge.webp",
+        "media/images/perks/brutalStrength.webp",
+        "media/images/perks/calmSpirit.webp",
+        "media/images/perks/deadHard.webp",
+        "media/images/perks/devourHope.webp",
+        "media/images/perks/empathy.webp",
+        "media/images/perks/enduring.webp",
+        "media/images/perks/huntressLullaby.webp",
+        "media/images/perks/ironWill.webp",
+        "media/images/perks/leader.webp",
+        "media/images/perks/lightborn.webp",
+        "media/images/perks/noMither.webp",
+        "media/images/perks/predator.webp",
+        "media/images/perks/proveThyself.webp",
+        "media/images/perks/quickAndQuiet.webp",
+        "media/images/perks/ruin.webp",
+        "media/images/perks/saboteur.webp",
+        "media/images/perks/selfCare.webp",
+        "media/images/perks/shadowborn.webp",
+        "media/images/perks/sprintBurst.webp",
+        "media/images/perks/streetwise.webp",
+        "media/images/perks/stridor.webp",
+        "media/images/perks/territorialImperative.webp",
+        "media/images/perks/thanatophobia.webp",
+        "media/images/perks/theThirdSeal.webp",
+        "media/images/perks/tinkerer.webp",
+        "media/images/perks/unnervingPresence.webp",
+        "media/images/perks/urbanEvasion.webp",
+        "media/images/perks/wereGonnaLiveForever.webp",
     ];
     imagePaths.forEach(function(src) {
         var img = new Image();
