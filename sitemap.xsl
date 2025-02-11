@@ -13,7 +13,7 @@
                     }
 
                     h1 {
-                        color: #f39c12;
+                        color:rgb(138, 0, 0);
                         font-size: 2.5em;
                         text-align: center;
                         margin-bottom: 20px;
