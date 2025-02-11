@@ -5,7 +5,6 @@
     
     <xsl:output method="html" indent="yes" encoding="UTF-8" />
 
-    <!-- Root template for the sitemap -->
     <xsl:template match="/urlset">
         <html>
             <head>
