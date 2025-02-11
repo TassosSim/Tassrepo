@@ -1,0 +1,11 @@
+# Contact information for reporting security issues
+Contact: mailto:msx@hotmail.se
+
+# Yes, this is canonical
+Canonical: https://dbd.chegge.se/security.txt
+
+# Preferred languages
+Language: en
+
+# Additional information or instructions
+Expires: 2025-12-31T23:59:59Z

@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+
+Sitemap: https://dbd.chegge.se/sitemap.xml
