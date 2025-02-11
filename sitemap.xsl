@@ -1,45 +1,61 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
-    <xsl:output method="html" indent="yes"/>
+<?xml version="1.0" encoding="UTF-8"?>
+<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" 
+                xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+                version="2.0">
+    
+    <xsl:output method="html" indent="yes" encoding="UTF-8" />
 
-    <xsl:template match="/sitemap">
+    <!-- Root template for the sitemap -->
+    <xsl:template match="/urlset">
         <html>
             <head>
                 <title>Sitemap for dbd.chegge.se</title>
                 <style>
+                    /* Modern Dark Mode Styles */
                     body {
-                        font-family: Arial, sans-serif;
+                        font-family: 'Arial', sans-serif;
                         margin: 20px;
-                        background-color: #121212;
-                        color: #e0e0e0;
+                        background-color: #1e1e1e;
+                        color: #dcdcdc;
                     }
+
                     h1 {
-                        color: #f1c40f;
-                        font-size: 2em;
+                        color: #f39c12;
                         text-align: center;
+                        font-size: 2.5em;
+                        margin-bottom: 20px;
                     }
+
                     ul {
                         list-style-type: none;
                         padding: 0;
+                        max-width: 900px;
+                        margin: 0 auto;
                     }
+
                     li {
-                        margin: 10px 0;
-                        padding: 10px;
                         background-color: #2c3e50;
-                        border-radius: 5px;
+                        margin: 10px 0;
+                        padding: 15px;
+                        border-radius: 10px;
+                        color: #ecf0f1;
                     }
+
                     li a {
                         text-decoration: none;
                         color: #3498db;
                         font-weight: bold;
                     }
+
                     li a:hover {
                         color: #1abc9c;
                     }
-                    p {
+
+                    li p {
                         font-size: 0.9em;
-                        color: #bdc3c7;
+                        color: #95a5a6;
                     }
+
                     p strong {
                         color: #ecf0f1;
                     }
@@ -48,17 +64,20 @@
             <body>
                 <h1>Sitemap for dbd.chegge.se</h1>
                 <ul>
-                    <xsl:for-each select="url">
-                        <li>
-                            <a href="{loc}"><xsl:value-of select="loc"/></a>
-                            <p><strong>Last Modified:</strong> <xsl:value-of select="lastmod"/></p>
-                            <p><strong>Change Frequency:</strong> <xsl:value-of select="changefreq"/></p>
-                            <p><strong>Priority:</strong> <xsl:value-of select="priority"/></p>
-                        </li>
-                    </xsl:for-each>
+                    <xsl:apply-templates select="url"/>
                 </ul>
             </body>
         </html>
+    </xsl:template>
+
+    <!-- Template for each URL -->
+    <xsl:template match="url">
+        <li>
+            <a href="{loc}"><xsl:value-of select="loc"/></a>
+            <p><strong>Last Modified:</strong> <xsl:value-of select="lastmod"/></p>
+            <p><strong>Change Frequency:</strong> <xsl:value-of select="changefreq"/></p>
+            <p><strong>Priority:</strong> <xsl:value-of select="priority"/></p>
+        </li>
     </xsl:template>
 
 </xsl:stylesheet>
