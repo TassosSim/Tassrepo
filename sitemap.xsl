@@ -10,28 +10,38 @@
                     body {
                         font-family: Arial, sans-serif;
                         margin: 20px;
-                        background-color: #f4f4f4;
-                        color: #333;
+                        background-color: #121212;
+                        color: #e0e0e0;
                     }
                     h1 {
-                        color: #2c3e50;
+                        color: #f1c40f;
+                        font-size: 2em;
+                        text-align: center;
                     }
                     ul {
                         list-style-type: none;
                         padding: 0;
                     }
                     li {
-                        margin: 5px 0;
-                        padding: 5px;
-                        background-color: #ecf0f1;
+                        margin: 10px 0;
+                        padding: 10px;
+                        background-color: #2c3e50;
                         border-radius: 5px;
                     }
                     li a {
                         text-decoration: none;
-                        color: #2980b9;
+                        color: #3498db;
+                        font-weight: bold;
                     }
                     li a:hover {
-                        color: #3498db;
+                        color: #1abc9c;
+                    }
+                    p {
+                        font-size: 0.9em;
+                        color: #bdc3c7;
+                    }
+                    p strong {
+                        color: #ecf0f1;
                     }
                 </style>
             </head>
