@@ -510,6 +510,17 @@ main {
   z-index: 1;
 }
 
+/*Disclaimer div and color*/
+#disclaimer {
+
+  color: white;
+  font-size: small;
+  text-align: center;
+  display: block;
+  margin-bottom: 1%;
+
+}
+
 /*Tooltip text colors 23-12-23*/
 
 /*Normal text*/
@@ -725,5 +736,18 @@ color: rgb(246, 105, 21);
 
   #perkslots div div span {
     font-size: 24px;
+  }
+
+  #disclaimer {
+
+    color: white;
+    font-size: 22px;
+    text-align: center;
+    display: block;
+    height: 200px;
+    width: 600px;
+    padding-left: 10%;
+    padding-right: 10%;
+    margin-bottom: 60px;
   }
 }
